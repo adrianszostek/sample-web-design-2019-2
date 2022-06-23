@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample Page</title>
+		<link rel="stylesheet" type="text/css" href="tech/theme.css" />
+		<link rel="stylesheet" type="text/css" href="tech/components.css" />
+		<link rel="stylesheet" type="text/css" href="tech/main.css" />
+		<script src="tech/jquery.js"></script>
+		<script src="tech/jquery.bez.js"></script>
+		<script src="tech/prepend.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body class="home">
+		<div id="SVGKit-section"></div>
+		<div id="PageLoading"></div>
+
+		<header>
+			<h2>Sample Page</h2>
+			<nav>
+				<a id="theme" name-SVGKit="svg_theme"></a>
+			</nav>
+		</header>
+		
+		
+		<section class="cards" name-name="Unpacked" name-color-palette="polar">
+			<figure id="unpacked-section" class="unpacked maxi" name-color-palette="polar">
+			</figure>
+		</section>
+
+			
+		<section id="launcher" name-name="Web Launcher (early version)" name-color-palette="wave">
+			<h2>Web Launcher (early version)</h2>
+			<hr style="padding-top: 20px">
+			<p style="padding: 0 12px 8px">Zakładki Ctrl+Shift+O</p>
+		</section>
+
+		
+		<section class="cards" name-name="Cards" name-color-palette="polar">
+			<figure id="card-1-section"  class="initiative" name-color-palette="darksky">
+			</figure>
+			<figure id="card-2-section" class="initiative" name-color-palette="time">
+			</figure>
+			<figure id="card-3-section" class="initiative" name-color-palette="wave">
+			</figure>
+			<figure id="card-4-section" class="initiative" name-color-palette="red">
+			</figure>
+			<figure id="card-5-section" class="initiative" name-color-palette="avocado">
+			</figure>
+			<figure class="initiative dev" name-color-palette="cyan">
+				<header style="background-image: url(img/fin.svg); "><h2>Cyan Card</h2><p>Fin</p></header>
+			</figure>
+			<a href="components_studio.html">
+				<header style="background-image: url(img/components-studio.svg); ">
+					<h2>Polar Studio</h2>
+				</header>
+			</a>
+			<a href="#" id="dev">
+				<header style="background-image: url(img/dev.svg);">
+					<h2>Dev mode</h2>
+				</header>
+			</a>
+		</section>
+		
+	</body>
+	<script src="tech/SVGKit.js"></script>
+	<script src="web_launcher.js"></script>
+	<script src="unpacked.js"></script>
+	<script src="card_1.js"></script>
+	<script src="card_2.js"></script>
+	<script src="card_3.js"></script>
+	<script src="card_4.js"></script>
+	<script src="card_5.js"></script>
+
+	<script src="tech/append.js"></script>
+</html>

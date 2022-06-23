@@ -1,0 +1,297 @@
+section { position: relative; width: 100%; box-sizing: border-box; float: left; padding: 8px 0; }
+body > section { margin: 8px 0; padding-top: 8px; padding-bottom: 8px; box-sizing: border-box; border-radius: var(--rounding); border: 1px solid var(--c2); }
+body > section > h2 { position: relative; width: 100%; background: var(--c1); line-height: 64px; padding: 0 24px; box-sizing: border-box; }
+
+body > section > hr { border: none; margin: 0; padding: initial; }
+body > section > hr > hr { border: .5px solid var(--c2); margin: 0; }
+
+
+/* Web Center section */
+
+	section#launcher { position: relative; display: flex; flex-wrap: wrap; padding: 15px 11px; }
+	
+	#launcher > div { width: 100%; padding: 8px; box-sizing: border-box; position: relative; display: flex; flex-wrap: wrap; }
+
+	#launcher > div > h3 { width: 100%; padding: 0 0 4px 4px; }
+	#launcher > div > *:not(h3) { padding: 8px; margin: 4px; position: relative; /**/width: calc(1 / 5 * 100% - 8px); box-sizing: border-box; border-radius: var(--rounding); transition: margin 200ms var(--easing), height 200ms var(--easing), box-shadow 100ms linear; height: 80px; overflow-y: hidden; background: var(--c0); box-shadow: var(--shadow-1); }
+	#launcher > div > *:not(h3):hover { box-shadow: var(--shadow-2); }
+
+	
+	#launcher > div > *:not(h3) img, #launcher > div > *:not(h3) figure { width: 64px; margin-right: 8px; display: inline-block; float: left; z-index: 8; border-radius: 4px; box-sizing: border-box; transition: transform 200ms var(--easing); }
+	
+	#launcher > div > *:not(h3) figure { height: 64px; background: var(--c1); display: flex; justify-content: center; align-items: center; }
+	
+	#launcher > div > *:not(h3) figure > svg { transform: scale(1); }
+	
+	#launcher > div > *:not(h3) figure > svg > * { fill: var(--c4); }
+	
+	#launcher > div > *:not(h3) p { line-height: 32px; padding: 0 0 0 8px; display: flex; align-items: center; }
+	#launcher > div > a p { line-height: 64px; }
+
+	#launcher > div > *:not(h3) a { font: var(--small-a); line-height: 32px; padding: 0 8px; display: inline-block; float: left; text-decoration: none; border-radius: var(--rounding); transition: background 300ms var(--easing), opacity 300ms var(--easing); }
+
+	#launcher > div > .folder a:hover { background: var(--c1); }
+	
+	#launcher > div > *:not(h3) > div { position: relative; width: calc(100% - 72px); right: 0; float: left; } /* sprawdza wysokość folderu */
+
+	#launcher > div > *:not(h3):hover > *:first-child { transform: scale(calc(68/64), calc(68/64)); }
+	#launcher > div > *:not(h3):active > *:first-child { transform: scale(calc(72/64), calc(72/64)); }
+
+
+	
+	/* Smart Folders 3 */
+
+		#launcher > div > div.long { height: 80px; }
+	
+		#launcher > div > div.long p > div  { margin-left: 8px; display: flex; align-items: center; float: right; }
+		
+		#launcher > div > div.long p > div svg  { transform: scale(calc(10 / 24)); transition: transform 200ms var(--easing); }
+		#launcher > div > div.long p > div svg > * { fill: var(--c5); }
+		
+		#launcher > div   div.long:hover p > div svg { transform: scale(calc(10 / 24)) rotate(180deg); }
+		
+		#launcher > div   div.long a.hidden_link { opacity: 0; transition: background 200ms var(--easing), opacity 100ms var(--easing); }
+	
+		#launcher > div   div.long:hover a.hidden_link { opacity: 1; transition: background 200ms var(--easing), opacity 400ms var(--easing); }
+
+
+
+
+
+/* Cards section */
+	
+	section.cards { margin: -8px; width: calc(100% + 16px); display: flex; flex-wrap: wrap; border: none; }
+	
+	.cards > * { display: inline-block; position: relative; float: left; border-radius: var(--rounding); box-shadow: var(--shadow-1c); margin: 8px; width: var(--card); height: calc(var(--card) / 4 * 3); box-sizing: border-box; background: var(--c0); transition: box-shadow 200ms linear, border-radius 300ms var(--easing); display: flex; flex-direction: column; }
+	
+	.cards > figure.unpacked { width: auto; display: flex; flex-direction: column; }
+	
+	.cards > figure.closed:active > div.top > header > * { opacity: 0; }
+	
+	.cards > figure > div.top { min-height: 100%; width: 100%; max-width: none; box-shadow: var(--shadow-2); background: var(--color); z-index: 61; }
+	.cards > figure.initiative > div { margin: 0 auto; position: relative; }
+	.cards > figure.initiative > div.fable { z-index: 60; display: flex; flex-direction: column; align-items: center; }
+
+		
+
+	/* header */
+	
+		.cards > * header { width: 100%; height: 100%; padding: 16px 24px; box-sizing: border-box; position: relative; display: flex; flex-direction: column; color: white; background-color: inherit; background-size: auto 100%; background-position: center; background-repeat: no-repeat; z-index: /**/ 50; }
+
+		.cards > figure.unpacked h1 { line-height: calc(100vh - 112px); text-align: center; position: relative; display: block; }
+		.cards > figure.unpacked header { flex: none; }
+	
+		.cards > * header h1, .cards > * header h2, .cards > * header p { transition: opacity 200ms var(--easing); }
+
+
+	/* dewiza */
+	
+		.cards > figure.initiative h4.dewiza { width: 100%; max-width: 1104px; padding: 36px 48px; text-align: center; color: white; position: relative; z-index: 53; margin: 0 auto; }
+
+	
+	/* section */
+	
+		.cards > figure section { z-index: /**/ 51; }
+		.cards > figure section > h3 { padding: 16px 0 0 0; max-width: var(--content-width); }
+		.cards > figure section > h3:first-of-type { padding-top: 24px; }
+		.cards > figure section > p  { max-width: var(--content-width); padding: 8px 0; }
+		
+		.cards > figure.initiative section { max-width: 1104px; padding-bottom: 48px; }
+
+		/*
+		 *
+		 */
+		body {
+			--content-width: 800px;
+		}
+		@media screen and (max-width: 1224px) {
+/*
+			.cards > figure.initiative > div.top > h4 { padding-left: calc((100vw - 48px - 800px) / 2); padding-right: calc((100vw - 48px - 800px) / 2); }
+*/
+			.cards > figure.initiative section, .cards > figure.initiative > div.top > h4 { max-width: 800px; width: var(--content-width); }
+			body {
+				--content-width: calc(100%);
+			}
+		}
+		@media screen and (max-width: 944px) {
+			.cards > figure.initiative > div > h4 { padding-left: 48px; padding-right: 48px; }
+			.cards > figure.initiative > div > h4:after { width: calc(100% - 48px); }
+			.cards > figure.initiative section { padding: 8px 48px 48px 48px; }
+		}
+		
+		.cards > figure.unpacked section { display: flex; justify-content: center; align-items: center; min-height: fit-content; padding: 24px calc(var(--spacing) / 2); }
+		.cards > figure.unpacked section:nth-last-of-type(2n) { flex-direction: row-reverse; }
+		.cards > figure.unpacked section > img { min-width: calc(100vw - 800px - calc(var(--spacing) * 3)); height: calc(100vw - 800px - calc(var(--spacing) * 3)); padding: 0 calc(var(--spacing) / 2); }
+		.cards > figure.unpacked section > div { width: 800px; padding: 0 calc(var(--spacing) / 2) 24px calc(var(--spacing) / 2); }
+		.cards > figure.unpacked section > div > h3 { padding-top: 32px; }
+		.cards > figure.unpacked section > div > h3:first-of-type { padding-top: 8px; }
+		.cards > figure.unpacked section > div > p { padding: 8px 0; }
+		.cards > figure.unpacked section > div > p > a { border-bottom-width: 1px; border-bottom-style: dotted; }
+		.cards > figure.unpacked section > div > hr { border-width: 0; border-bottom: 1px solid var(--c4); margin-top: 36px; }
+
+
+	/* footer */
+			
+		.cards > figure.initiative footer { padding: 48px 24px; position: relative; display: flex; flex-direction: column; align-items: center; width: 100vw; box-sizing: border-box; margin: 0 auto; background: var(--c5); color: var(--c0); }
+
+		.cards > figure div.info { display: none; }
+
+	
+	/* * */
+
+	
+	/* Returnability */
+ 
+	.cards + #fade { background: var(--c5); opacity: .8; animation: appear calc(7 / 4 * var(--butter)) var(--easing) forwards; width: 100vw; height: calc(100vh - 64px); position: fixed; left: 0; top: 64px; z-index: 91; }
+	.cards > figure { transition: box-shadow 200ms linear, border-radius var(--butter) var(--easing), background 300ms var(--easing), height calc(7 / 4 * var(--butter)) var(--easing), top calc(7 / 4 * var(--butter)) var(--easing), width var(--butter) var(--easing), left var(--butter) var(--easing); }
+	.cards > figure.copy { opacity: 0; box-shadow: var(--shadow-2c); }
+	
+		/* initial state */
+			.cards > *.closed { z-index: 90; cursor: pointer; overflow: hidden; }
+			.cards > *.closed:hover { box-shadow: var(--shadow-2c); }
+			.cards > figure.closed header h1 { opacity: 0; height: 0; }
+	
+		/* launching .opened */
+			.cards > figure.opened { position: fixed; box-shadow: var(--shadow-2c); overflow-x: hidden; overflow-y: scroll; z-index: 92; cursor: default; }
+			.cards > figure.opened > div.top { background-color: var(--color); }
+			.cards > figure.opened header h1 { opacity: 0; height: 0; }
+			.cards > figure.opened header :not(h1) { opacity: 0; }
+			
+			.cards > figure.opened:not(.closed_loading) { border-radius: 0; }
+	
+		/* .opened ready */
+			.cards > figure.opened.opened_loaded header { align-items: center; justify-content: center; }
+			.cards > figure.opened.opened_loaded header h1 { opacity: 1; height: initial; }
+			.cards > figure.opened.opened_loaded header :not(h1) { height: 0; }
+			
+			.cards > figure.unpacked.opened_loaded header { /*background-attachment: fixed;*/ }
+	
+		/* loading .closed */
+			.cards > figure.closed_loading { transition: box-shadow 200ms linear, border-radius var(--butter) var(--easing), height var(--butter) var(--easing), top var(--butter) var(--easing), width var(--butter) var(--easing), left var(--butter) var(--easing); }
+			.cards > figure.closed_loading header { align-items: center; justify-content: center; transition: transform var(--butter) var(--easing); z-index: 105; }
+			.cards > figure.closed_loading header h1 { opacity: 0; height: initial; }
+			.cards > figure.closed_loading header :not(h1) { height: 0; }
+			
+			.cards > figure.closed_loading { border-radius: var(--rounding); }
+	
+		/* finish */
+			.cards > figure.closed_loading_2 header h1 { height: 0; }
+			.cards > figure.closed_loading_2 header :not(h1) { opacity: 1; }
+			
+			.cards > figure.closed_loading_2 { border-radius: var(--rounding); overflow: hidden; }
+
+
+	/* * */
+
+
+	/* Card components */
+
+		.cards .buttons, .cards .gallery-container, .cards .table-container, .cards pre { margin: 16px -24px; max-width: calc(var(--content-width) + 48px); border-radius: var(--rounding); border: 1px solid var(--c2); box-sizing: border-box; transition: box-shadow 200ms linear; }
+
+
+		/* Gallery */
+		
+			.gallery-container { overflow: hidden; position: relative; display: flex; justify-content: center; background: var(--c5); }
+			.gallery-container > .gallery { display: flex; overflow-x: auto; overflow-y: hidden; min-width: 100%; }
+			.gallery-container > .gallery:after { content: ''; display: flex; min-width: 16px; height: 100%; position: relative; }
+			.gallery-container > .gallery > figure { min-width: 100%; padding: 16px 24px; box-sizing: border-box; position: relative; margin-right: 16px; border-radius: var(--rounding); overflow: hidden; background: var(--c0); transform: scale(.8); transition: transform 500ms var(--easing); }
+			.gallery-container > .gallery > figure.current { transform: scale(1); transition: transform 500ms var(--easing); }
+			.gallery-container > .gallery > figure img { width: 100%; float: left; filter: grayscale(50%); transition: filter 350ms var(--easing); }
+			.gallery-container > .gallery.min > figure img { filter: none; }
+			.gallery-container > .gallery *::selection { background: none; }
+			.gallery-container > .gallery > figure > div { padding: 24px 24px calc(24px + 48px + 24px) 24px; height: auto; width: 100%; position: absolute; bottom: 0; left: 0; box-sizing: border-box; transition: height 350ms var(--easing), background 350ms var(--easing); background: var(--t2); }
+			.gallery-container > .gallery.min > figure > div { height: calc(24px + 48px + 24px + 28px + 24px); background: var(--t1); }
+			.gallery-container > .gallery > figure h4 { display: inline; padding-right: 4px; }
+			.gallery-container > .gallery ul, .gallery ol { padding: 0; }
+			.gallery-container > .gallery::-webkit-scrollbar { height: 0; }
+			
+			.gallery-container:not(.pictures) figure { padding-bottom: calc(24px + 48px + 24px); }
+			
+			.gallery-container.pictures { border: none; cursor: pointer; }
+			.gallery-container.pictures > .gallery { padding: 0; }
+			.gallery-container.pictures > .gallery > figure { padding: 0; }
+			.gallery-container.pictures > .gallery > figure div p { display: inline; position: relative; transition: opacity 350ms var(--easing); }
+			.gallery-container.pictures > .gallery > figure div h1 { display: inline; padding-right: 4px; float: left; }
+			.gallery-container.pictures > .gallery.min > figure div p { opacity: 0.1; }
+		
+			.gallery-container > .control { position: absolute; bottom: 24px; height: 48px; border-radius: var(--rounding); width: 192px; z-index: 10; display: flex; background: var(--c0); box-shadow: var(--shadow-1); overflow: hidden; }
+			.gallery-container > .control > a { width: 50%; height: 100%; transition: background 200ms var(--easing); box-sizing: border-box; display: flex; justify-content: center; align-items: center; }
+			.gallery-container > .control > a.prev { border-right: 1px solid var(--c2); }
+			.gallery-container > .control *::selection { background: none; }
+			.gallery-container > .control > a:hover { background: var(--c1); }
+			.gallery-container > .control > a:active { background: var(--c2); }
+			.gallery-container > .control > a > div { display: flex; }
+			.gallery-container > .control svg { transform: scale(calc(12 / 24)); }
+			.gallery-container > .control svg > * { fill: var(--polar); }
+
+		
+		/* Table */
+
+			.table-container { display: flex; overflow: visible; }
+			.table-container > div.column-1 { width: 211.5px; box-shadow: var(--shadow-1); display: flex; flex-direction: column; border-radius: var(--rounding); margin: -1px; border: 1px solid var(--c0); }
+			.table-container > div.column-1 > p { justify-content: flex-start; border-bottom: 1px solid var(--c1); }
+			.table-container > div.column-1 > p:first-of-type { border-bottom: 1px solid var(--c2); }
+			
+			.table-container div > p { width: 211.5px; max-height: 53px; box-sizing: border-box; padding: 12px 24px; display: flex; justify-content: center; align-items: center; flex: 1; }
+			.table-container div.column-1 > p:last-of-type, .table-container > div.table > div:last-of-type { border-bottom: none; }
+			.table-container > .table { overflow-x: auto; overflow-y: hidden; display: flex; flex-direction: column; align-items: baseline; text-align: center; }
+			.table-container > .table > div { display: flex; transition: background 200ms var(--easing); border-bottom: 1px solid var(--c1);  }
+			.table-container > .table > div:first-of-type { border-bottom: 1px solid var(--c2); }
+
+			.table::-webkit-scrollbar { background: transparent; height: 16px; width: auto; }
+			.table::-webkit-scrollbar-button { width: 12px; }
+			.table::-webkit-scrollbar-thumb {  background: var(--c3); border-radius: var(--rounding); }
+		
+		
+		/* Buttons */
+		
+			.cards > figure .buttons { display: flex; flex-direction: column; margin: 0 -24px 0 0; padding: 8px 0; width: 256px; float: right; overflow: hidden; box-shadow: var(--shadow-1); border: none; }
+			.buttons > a { display: block; padding: 16px 24px; transition: background 300ms var(--easing), box-shadow 200ms linear, border-radius 300ms var(--easing), padding 300ms var(--easing), margin 300ms var(--easing); position: relative; z-index: 20; }
+			.buttons > a:hover { background: var(--c1); z-index: 21; }
+			.buttons > a:active { margin: -8px 0; padding: 24px; }
+			@media screen and (max-width: 1224px) {
+				.cards > figure .buttons { width: calc(var(--content-width) + 48px); padding: 0 8px; flex-direction: row; margin: 16px -24px; float: none; }
+				.buttons > a { padding: 16px;  }
+				.buttons > a:active { margin: 0 -8px; padding: 16px 24px; }
+			}
+
+		
+		/* Block of code */
+		
+			pre { background-color: var(--c5); color: var(--c0); padding: 24px; border: none; border-radius: var(--rounding); }
+			div.gallery pre { margin-bottom: 0; background: none; color: var(--c5); }
+	
+
+
+
+
+/* Waiting for It section */
+
+	section#waitingforit { padding: 24px; }
+	
+		#waitingforit p.label { line-height: 20px; background: var(--c1); border-radius: var(--rounding); text-align: center; padding: 8px; }
+		
+		#waitingforit > #timeline { width: calc(100% - 8px); position: relative; margin: 80px 4px 8px 4px; }
+		#waitingforit > #timeline div.line { width: calc(100% + 8px); height: 8px; margin: 0 -4px; border-radius: 4px; background: var(--color); }
+		#waitingforit > #timeline div.event { width: 24px; height: 24px; margin: -16px -12px; /* przesunięcie na środek daty */ position: absolute; border-radius: 12px; background: var(--color); box-shadow: var(--shadow-1c); z-index: 11; }
+		#waitingforit > #timeline div.event:after { content: ''; display: block; position: relative; top: 8px; left: 8px; width: 8px; height: 8px; background: var(--c0); border-radius: 8px; box-shadow: inset var(--shadow-1c); }
+		#waitingforit > #timeline p { position: absolute; top: -80px; margin-left: -4px; z-index: 10; }
+		#waitingforit > #timeline p:after { content: ''; display: block; width: 8px; height: 26px; position: absolute; left: 0; bottom: -18px; background: var(--c1); }
+		#waitingforit > #timeline p.SecondLine { top: -160px; z-index: 9; }
+		#waitingforit > #timeline p.SecondLine:after { bottom: -98px; height: calc(26px + 56px + 24px); }
+		#waitingforit > #timeline p.ThirdLine:after { left: auto; right: 0; }
+		#waitingforit > #timeline div.month { width: 8px; height: 24px; margin: -8px 0 0 -4px; /* przesunięcie na środek daty */ position: absolute; border-radius: 4px; background: var(--color); }
+
+		#waitingforit > #passed { display: flex; flex-wrap: wrap; margin: 24px -8px -8px -8px; width: calc(100% + 16px); }
+		#waitingforit > #passed > p.label { margin: 8px; }
+
+
+
+
+
+/* Jumping Clock section */
+
+	section#clock { padding: 0; }
+	
+		#clock > * { width: 50%; }
+		#clock > video { height: 100%; float: right; background: black; border-radius: var(--rounding); box-shadow: var(--shadow-1c); }

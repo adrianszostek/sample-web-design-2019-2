@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Components Studio</title>
+		<link rel="stylesheet" type="text/css" href="tech/theme.css" />
+		<link rel="stylesheet" type="text/css" href="tech/components.css" />
+		<link rel="stylesheet" type="text/css" href="tech/main.css" />
+		<script src="tech/jquery.js"></script>
+		<script src="tech/jquery.bez.js"></script>
+		<script src="tech/prepend.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body class="">
+		<div id="SVGKit-section"></div>
+		<div id="PageLoading"></div>
+		<header name-color-palette="polar">
+			<h2>
+				Sample Page
+				<span>Components Studio</span>
+			</h2>
+			<nav>
+				<a id="theme" name-SVGKit="svg_theme"></a>
+			</nav>
+		</header>
+		<section style="padding-left: 24px; padding-right: 24px;">
+			<h3>Returnable Cards</h3>
+<pre>
+&lt;section class="cards"&gt;
+	&lt;figure&gt;
+		&lt;header&gt;
+			&lt;h1&gt;&lt;/h1&gt;
+			&lt;h2&gt;&lt;/h2&gt;
+		&lt;/header&gt;
+		&lt;h4&gt;&lt;/h4&gt;
+		&lt;section&gt;
+			<i>komponenty</i>
+		&lt;/section&gt;
+		&lt;footer&gt;
+		&lt;/footer&gt;
+		&lt;nav&gt;&lt;/nav&gt;
+	&lt;/figure&gt;
+&lt;/section&gt;
+</pre>
+<!--
+			<p>Rozmiary semi i maxi.<br>[z-index na kanale 9]</p>
+-->
+		</section>
+		<section class="cards">
+			<figure class="initiative" name-color-palette="avocado">
+				<header>
+					<h1>&lt;h1&gt;Card components&lt;/h1&gt;</h1>
+					<h2>&lt;h2&gt;Initiative card components&lt;/h2&gt;</h2>
+<!--
+					<p>(Rozmiar semi - wspiera komponenty)</p>
+-->
+				</header>
+				<h4>&lt;h4&gt;Nagłówek h4 dodany za headerem&lt;/h4&gt;</h4>
+				<section>
+					<h3>Nagłówek h3</h3>
+					<p>Jest używany do tytułowania rozdziału, automatycznie dodawany do tabs'ów.</p>
+					<h3>Table Component</h3>
+					<p>
+						Tabela bez ograniczenia wymiarów. Każdy wpisany div jest scharakteryzowanym obiektem, co w tabeli wyświetla się jako obiekty w pierwszej kolumnie, a ich właściwości w kolejnych.
+					</p>
+					
+					<div class="table">
+						<div>
+							<p>item</p>
+							<p>number</p>
+							<p>sweetness</p>
+							<p>year</p>
+							<p>updates</p>
+						</div>
+						<div>
+							<p>Gingerbread</p>
+							<p>2.3</p>
+							<p>no</p>
+							<p>2010</p>
+							<p>7</p>
+						</div>
+						<div>
+							<p>Honeycomb</p>
+							<p>3.0 - 3.2</p>
+							<p>yes</p>
+							<p>2011</p>
+							<p>8</p>
+						</div>
+						<div>
+							<p>ICS</p>
+							<p>4.0</p>
+							<p>a little bit</p>
+							<p>2011</p>
+							<p>4</p>
+						</div>
+						<div>
+							<p>Jelly Bean</p>
+							<p>4.1 - 4.3</p>
+							<p>oh yes</p>
+							<p>2012</p>
+							<p>7</p>
+						</div>
+						<div>
+							<p>Kitkat</p>
+							<p>4.4</p>
+							<p>the sweetest</p>
+							<p>2013</p>
+							<p>4</p>
+						</div>
+					</div>
+					
+					<p>Schemat (2x3):</p>
+<pre>
+&lt;div class="table"&gt;
+	&lt;div&gt;
+		&lt;p&gt;&lt;/p&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+		&lt;p&gt;&lt;/p&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+		&lt;p&gt;&lt;/p&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+					
+					<h3>Gallery Component</h3>
+					<p>Karuzela przedstawiająca elementy danego zagadnienia. Przewijana okrężnie.<br>Dzięki dodaniu class="pictures" można utworzyć galerię zdjęć z ich opisami, które po kliknięciu się chowają, pozwalając oglądać same zdjęcia.</p>
+					
+					
+					<div class="gallery">
+						<figure>
+							<h4>Galeria jak ta</h4>
+							<p>Schemat:</p>
+<pre>
+&lt;div class="gallery"&gt;
+	&lt;figure&gt;
+		&lt;h4&gt;&lt;/h4&gt;
+			&lt;p&gt;&lt;/p&gt;
+			&lt;ul&gt;&lt;/ul&gt;
+			&lt;ol&gt;&lt;/ol&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+</pre>
+						</figure>
+						<figure>
+							<h4>Galeria ze zdjęciami jak ta niżej</h4>
+							<p>Schemat:</p>
+<pre>
+&lt;div class="gallery pictures"&gt;
+	&lt;figure&gt;
+		&lt;img src=""&gt;
+		&lt;h4&gt;&lt;/h4&gt;
+			&lt;p&gt;&lt;/p&gt;
+			&lt;ul&gt;&lt;/ul&gt;
+			&lt;ol&gt;&lt;/ol&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+</pre>
+						</figure>
+					</div>
+					
+					<div class="gallery pictures">
+						<figure>
+							<img src="img/sample.png">
+							<h4>Item 1</h4>
+							<p>Google’s design language for the past several months has largely focused on white elements...</p>
+						</figure>
+						<figure>
+							<img src="img/sample.png">
+							<h4>Item 2</h4>
+							<p>Google’s design language for the past several months has largely focused on white elements, and lots of users aren’t all that happy about it. Now, Google seems to be bringing an official dark mode to its dialer app.</p>
+						</figure>
+						<figure>
+							<img src="img/sample.png">
+							<h4>Item 3</h4>
+							<p>Google’s design language for the past several months has largely focused on white elements, and lots of users aren’t all that happy about it. Now, Google seems to be bringing an official dark mode to its dialer app. The dialer app installed on Pixel devices, among other phones, is simply called “Google Phone.”</p>
+						</figure>
+						<figure>
+							<img src="img/sample.png">
+							<h4>Item 4</h4>
+							<p>Google’s design language for the past several months has largely focused on white elements, and lots of users aren’t all that happy about it. Now, Google seems to be bringing an official dark mode to its dialer app. The dialer app installed on Pixel devices, among other phones, is simply called “Google Phone.” Recently, Google updated the changelog for the most recent version of the Google Phone app on the Play Store to quietly mention that a dark mode is coming soon.</p>
+						</figure>
+					</div>
+
+					
+					<h3>Buttons Component</h3>
+					<div class="buttons">
+						<a>Ethan 1</a>
+						<a>Item 2</a>
+						<a>Item 3</a>
+						<a>Item 4</a>
+					</div>
+					<p>
+						Linki dotyczące danego rozdziału pojawiają się w prawym sektorze obok dotyczącego ich tematu. Aby wyświetlały się we właściwym miejscu, muszą być umieszczone tuż pod tytułem rozdziału.
+					</p>
+					<p>Schemat:</p>
+<pre>
+&lt;div class="buttons"&gt;
+	&lt;a href=""&gt;&lt;/a&gt;
+	&lt;a href=""&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+				</section>
+			</figure>
+
+
+
+
+			
+			<figure class="initiative dev">
+				<header style="background-color: cornflowerblue; color: white;">
+					<h2>Lab</h2>
+				</header>
+				<section>
+					<h3>Current header animation</h3>
+					<div class="buttons">
+						<a onclick="header1()">Change title to Abc, 400ms delay</a>
+						<a onclick="header2()">Restore title</a>
+						<a onclick="header3()">Change Light theme button in nav</a>
+						<a onclick="header4()">Remove Light theme button, 800ms delay</a>
+					</div>
+					<script>
+						function header1() {
+							cur = $("header.current").find("h2 > h2");
+							curT = cur.text();
+							HeaderSwap(cur, "Abc", "html", 400);
+						}
+						function header2() {
+							HeaderSwap(cur, curT, "html", 0);
+						}
+						function header3() {
+							na = $("header.current > nav");
+							naVW = $('<a id="theme" name-SVGKit="svg_theme">Light theme</a>');
+							HeaderSwap(na, $('<a id="theme" name-SVGKit="svg_theme">Light theme</a>'), "prependTo", 0);
+						}
+						function header4() {
+							HeaderSwap(na, $("header.current > nav > a#theme"), "remove", 800);
+						}
+						function HeaderSwap(objectDisappearing, objectAppearing, method, timing) {
+							if (timing == 0) timing = 200;
+							objectDisappearing.addClass("zam");
+							setTimeout( function() {
+								if (method == "html") objectDisappearing.html(objectAppearing).removeClass("zam");
+								else if (method == "prependTo") objectAppearing.prependTo(objectDisappearing);
+								else if (method == "appendTo") objectAppearing.appendTo(objectDisappearing);
+								else if (method == "remove") objectAppearing.remove();
+								objectDisappearing.removeClass("zam");
+								SVGKit();
+							}, timing);
+						}
+					</script>
+					<style>
+						header.current > h2 > h2 { transition: opacity 200ms var(--easing), transform 200ms var(--easing); }
+						header.current > nav { transition: opacity 200ms var(--easing), transform 200ms var(--easing); }
+						.zam { opacity: 0; transform: translate(0,-8px); }
+					</style>
+				</section>
+				<section>
+					<h3>Title changer#JS #Useful</h3>
+					<div class="buttons">
+						<a onclick="t3()">Detect title</a>
+						<a onclick="t1()">Change title to Horn of plenty</a>
+						<a onclick="t2()">Return detected title</a>
+						<a onclick="t4()">Reset</a>
+					</div>
+					<script>
+						originalTitle = $(document).attr("title");
+						detectedTitle = "Not detected";
+						newTitle = "Horn of plenty";
+						function t3(){
+							detectedTitle = $(document).attr("title"); }
+						function t1(){
+							$(document).attr("title", newTitle); }
+						function t2(){
+							$(document).attr("title", detectedTitle); }
+						function t4(){
+							$(document).attr("title", originalTitle); }
+					</script>
+				</section>
+			</figure>		
+		</section>	
+	</body>
+	<script src="tech/SVGKit.js"></script>
+	<script src="tech/append.js"></script>
+</html>

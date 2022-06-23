@@ -1,0 +1,29 @@
+
+
+
+/* Return Button */
+/*
+body > a#return_button { position: fixed; top: 8px; left: 24px; display: flex; justify-content: center; align-items: center; width: 48px; height: 48px; border-radius: 24px; transition: background 200ms var(--easing); z-index: 102; cursor: pointer; }
+body > a#return_button svg > * { fill: white; }
+body > a#return_button:hover { background: var(--light-1); }
+body > a#return_button:active { background: var(--light-2); }
+*/
+
+
+
+
+	
+/*
+	.buttons:hover, .gallery-container:hover, .table:hover, pre:hover { box-shadow: var(--shadow-1); }
+*/
+	
+
+
+
+
+
+/* Responsive margins */
+@media screen and (max-width: 1727px) {
+body > a#return_button { left: 8px; top: 16px; width: 32px; height: 32px; } }
+*/
+
